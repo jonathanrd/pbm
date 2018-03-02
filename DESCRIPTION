@@ -1,0 +1,14 @@
+Package: ppbm
+Title: Protein-Protein Binding Models
+Version: 0.0.0.9000
+Authors@R: person("Jonathan", "Davies", email = "jd769@bath.ac.uk", role = c("aut", "cre"))
+Description: Something.
+Depends: R (>= 3.4.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
