@@ -1,4 +1,4 @@
 library(testthat)
-library(ppbm)
+library(pbm)
 
-test_check("ppbm")
+test_check("pbm")

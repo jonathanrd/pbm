@@ -1,4 +1,4 @@
-library(ppbm)
+library(pbm)
 context("Generate Binding Response Functions")
 
 test_that("binding1to1 returns expected values", {
