@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-When collecting protein-ligand binding data using a technique such as Biolayer Interferometry (BLI) or Surface Plasmon Resonance (SPR), it is useful to simulate binding curves to help optimise your experiments. After initial binding parameters are known, binding curves can be simulated and paramteters such as: analyte concentration, time of association, dissociation etc. can be varied. The models within this package may also be used to fit a curve to measured binding data using a non-linear regression.
+When collecting protein-ligand binding data using a technique such as Biolayer Interferometry (BLI) or Surface Plasmon Resonance (SPR), it is useful to simulate binding curves to help optimise your experiments. After initial binding parameters are known, binding curves can be simulated and parameters such as: analyte concentration, time of association, dissociation etc. can be varied. The models within this package may also be used to fit a curve to measured binding data using a non-linear regression.
 
 Currently, two binding models are included with this package:
 
