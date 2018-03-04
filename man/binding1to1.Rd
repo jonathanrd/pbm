@@ -4,7 +4,8 @@
 \alias{binding1to1}
 \title{Generate a 1:1 Binding Curve}
 \usage{
-binding1to1(t, t0, conc, kon, koff, rmax, drift = 0)
+binding1to1(t, t0, conc, kon, koff, rmax, drift = 0, offset = 0,
+  doffset = 0)
 }
 \arguments{
 \item{t}{Time.}
@@ -20,6 +21,10 @@ binding1to1(t, t0, conc, kon, koff, rmax, drift = 0)
 \item{rmax}{Maximum response, Rmax.}
 
 \item{drift}{Optional. Parameter to add a linear baseline drift.}
+
+\item{offset}{Optional. Applies a global offset to the response value.}
+
+\item{doffset}{Optional. Applies an offset at the start of dissociation.}
 }
 \description{
 Returns a response value for given parameters at time, t.
