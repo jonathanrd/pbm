@@ -4,7 +4,7 @@
 \alias{binding2to1}
 \title{Generate a 2:1 Binding Curve}
 \usage{
-binding2to1(t, t0, conc, kon1, koff1, rmax1, kon2, koff2, rmax2)
+binding2to1(t, t0, conc, kon1, koff1, rmax1, kon2, koff2, rmax2, drift = 0)
 }
 \arguments{
 \item{t}{Time.}
@@ -24,6 +24,8 @@ binding2to1(t, t0, conc, kon1, koff1, rmax1, kon2, koff2, rmax2)
 \item{koff2}{Koff binding constant for second component.}
 
 \item{rmax2}{Maximum response, Rmax, for second component.}
+
+\item{drift}{Optional. Parameter to add a linear baseline drift.}
 }
 \description{
 Returns a response value for given parameters at time, t.

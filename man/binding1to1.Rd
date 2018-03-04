@@ -4,7 +4,7 @@
 \alias{binding1to1}
 \title{Generate a 1:1 Binding Curve}
 \usage{
-binding1to1(t, t0, conc, kon, koff, rmax)
+binding1to1(t, t0, conc, kon, koff, rmax, drift = 0)
 }
 \arguments{
 \item{t}{Time.}
@@ -18,6 +18,8 @@ binding1to1(t, t0, conc, kon, koff, rmax)
 \item{koff}{Koff binding constant.}
 
 \item{rmax}{Maximum response, Rmax.}
+
+\item{drift}{Optional. Parameter to add a linear baseline drift.}
 }
 \description{
 Returns a response value for given parameters at time, t.
