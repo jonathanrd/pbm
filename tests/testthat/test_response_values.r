@@ -32,7 +32,7 @@ test_that("binding2to1 returns expected values", {
     binding2to1(1600, 1000, 6e-7, 10000, 0.001, 0.5, 1000, 0.02))
 })
 
-test_that("binding1to1 drift parameter", {
+test_that("binding2to1 drift parameter", {
   expect_warning(
     val <- binding2to1(1600, 1000, 6e-7, 10000, 0.001, 0.5, 1000, 0.02, 0.4,
     drift = 0.00004))
