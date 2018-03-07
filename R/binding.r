@@ -3,6 +3,20 @@ req <- function(conc, rmax, kd) {
   (conc * rmax) / (conc + kd)
 }
 
+#' Time to Equilibrium
+#'
+#' Returns the time taken to reach 95\% equilibrium.
+#' @param conc Analyte concentration.
+#' @param kon Kon binding constant.
+#' @param koff Koff binding constant.
+#' @param theta Default 0.95.
+#' @export
+#' @examples
+#' tteq(6e-7,20000,0.01)
+tteq <- function(conc, kon, koff, theta = 0.95) {
+  (-1 * log(1 - theta)) / (kon * conc + koff)
+}
+
 association <- function(t, conc, kon, koff, rmax) {
   req(conc, rmax, (koff / kon)) * (1 - exp(-1 * (kon * conc + koff) * t))
 }
