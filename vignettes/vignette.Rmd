@@ -2,7 +2,9 @@
 title: "Protein Binding Models"
 author: "Jonathan Davies"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette:
+    toc: true
 vignette: >
   %\VignetteIndexEntry{Protein Binding Models}
   %\VignetteEngine{knitr::rmarkdown}
@@ -82,4 +84,48 @@ Parameters predicted from fitted model:
 
 ```{r, echo=FALSE, results='asis'}
 knitr::kable(t(coefficients(fit)))
+```
+
+## Estimating ideal association times
+
+When collecting data, it is recommended to allow the associtaion to reach equilibrium. The command `tteq()`, by default, returns the time taken to reach 95\% equilibrium. See below for an example usage.
+
+```{r}
+# Choose a range of analyte concentrations and give known parameters.
+conc_range <- c(6e-7,3e-7,1.75e-7,8.75e-8,2.916e-8)
+kon  <- 10000
+koff <- 0.01
+
+# Calculate the time to equilibrium for each concentration.
+tteq(conc_range,kon,koff)
+```
+
+Now we can see that our time to equilibrium for the given concentrations ranges from 187 seconds to 291 seconds. Given these values we can see the difference using calculated data. Below are curves for the given parameters with two different association times.
+
+```{r, fig.show='hold',fig.height=3,fig.width=7,fig.cap = "Selecting an appropriate association time."}
+library(ggplot2)
+library(gridExtra)
+
+t <- seq(0,300)
+t0 <-  median(t)
+plot1 <- ggplot()
+for (conc in conc_range) {
+curve <- binding1to1(t,t0,conc,10000,0.01,1)
+plot1 <- plot1 + geom_line(aes_string(x=t,y=curve))
+}
+
+t <- seq(0,600)
+t0 <-  median(t)
+plot2 <- ggplot()
+for (conc in conc_range) {
+curve <- binding1to1(t,t0,conc,10000,0.01,1)
+plot2 <- plot2 + geom_line(aes_string(x=t,y=curve))
+}
+
+plot1 <- plot1+labs(x = "Time (s), t0 = 150")
+plot1 <- plot1+labs(y = "Response")
+plot2 <- plot2+labs(x = "Time (s), t0 = 300")
+plot2 <- plot2+labs(y = "Response")
+
+grid.arrange(plot1, plot2, ncol=2)
 ```
