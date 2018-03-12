@@ -2,7 +2,7 @@ Package: pbm
 Title: Protein Binding Models
 Version: 1.1.0
 Authors@R: person("Jonathan", "Davies", email = "jd769@bath.ac.uk", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4986-8594"))
-Description: Binding models which are useful when analysing protein-ligand interactions by techniques such as Biolayer Interferometry (BLI) or Surface Plasmon Resonance (SPR). Naman B. Shah, Thomas M. Duncan (2014) <doi:10.3791/51383>. Hoang H. Nguyen et al. (2015) <doi:10.3390/s150510481>. After initial binding parameters are known, binding curves can be simulated and parameters can be varied. The models within this package may also be used to fit a curve to measured binding data using non-linear regression. 
+Description: Binding models which are useful when analysing protein-ligand interactions by techniques such as Biolayer Interferometry (BLI) or Surface Plasmon Resonance (SPR). Naman B. Shah, Thomas M. Duncan (2014) <doi:10.3791/51383>. Hoang H. Nguyen et al. (2015) <doi:10.3390/s150510481>. After initial binding parameters are known, binding curves can be simulated and parameters can be varied. The models within this package may also be used to fit a curve to measured binding data using non-linear regression.
 Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -12,5 +12,7 @@ LazyData: true
 RoxygenNote: 6.0.1.9000
 Suggests: testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    ggplot2,
+    gridExtra
 VignetteBuilder: knitr
