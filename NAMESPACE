@@ -2,4 +2,5 @@
 
 export(binding1to1)
 export(binding2to1)
+export(req)
 export(tteq)

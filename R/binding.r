@@ -1,5 +1,18 @@
 
+#' Response at equilibrium
+#'
+#' Returns the response value at equilibrium from concentration, Rmax and KD.
+#' @param conc Analyte concentration.
+#' @param rmax Maximum response.
+#' @param kd Equilibrium dissociation constant.
+#' @export
+#' @examples
+#' req(6e-7,1.2,6e-7)
 req <- function(conc, rmax, kd) {
+
+  if (conc < 0) warning("Invalid concentration")
+  if (rmax < 0) warning("Invalid Rmax")
+
   (conc * rmax) / (conc + kd)
 }
 
