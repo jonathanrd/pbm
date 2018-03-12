@@ -25,6 +25,19 @@ Currently, two binding models are included with this package:
 
 
 ## 1:1 Binding
+Usage: `binding1to1(t, t0, conc, kon, koff, rmax)`
+
+$$Response = \frac{[A]R_{max}}{[A] + K_{D}}(1 - e^{-(K_{on}[A] + K_{off})t})$$
+
+
+Parameters:
+
+ - \(t\), time (s) - can also be a vector.
+ - \(t_0\), time of dissociation.
+ - \(conc\), concentration of analyte in M.
+ - \(k_{on}\) \((k_a)\), units \(M^{-1}s^{-1}\)
+ - \(k_{off}\) \((k_d)\), units \(s^{-1}\)
+ - \(R_{max}\), maxiumum response.
 
 ```{r, fig.show='hold',fig.height=3.5,fig.width=5,fig.cap = "Example of a 1:1 binding curve."}
 library(pbm)
