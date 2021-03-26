@@ -4,8 +4,20 @@
 \alias{binding2to1}
 \title{Generate a 2:1 Binding Curve}
 \usage{
-binding2to1(t, t0, conc, kon1, koff1, rmax1, kon2, koff2, rmax2, drift = 0,
-  offset = 0, doffset = 0)
+binding2to1(
+  t,
+  t0,
+  conc,
+  kon1,
+  koff1,
+  rmax1,
+  kon2,
+  koff2,
+  rmax2,
+  drift = 0,
+  offset = 0,
+  doffset = 0
+)
 }
 \arguments{
 \item{t}{Time.}

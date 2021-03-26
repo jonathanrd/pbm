@@ -4,8 +4,7 @@
 \alias{binding1to1}
 \title{Generate a 1:1 Binding Curve}
 \usage{
-binding1to1(t, t0, conc, kon, koff, rmax, drift = 0, offset = 0,
-  doffset = 0)
+binding1to1(t, t0, conc, kon, koff, rmax, drift = 0, offset = 0, doffset = 0)
 }
 \arguments{
 \item{t}{Time.}
