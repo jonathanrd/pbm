@@ -1,6 +1,5 @@
 ## Resubmission
 * Updated Author email address (previous address is no longer available). New email also listed on ORCID page.
-* Dependence on R version set to '3.4.4'
 * Thanks!
 
 ## Test environments
